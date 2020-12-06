@@ -1,6 +1,5 @@
 package pl.example.rngcalculator;
 
-import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +14,6 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/rng", produces = APPLICATION_JSON_VALUE)
-@Api(tags = {"Rng"})
 public class RngController {
 
     private final RngService<Integer> rngService;

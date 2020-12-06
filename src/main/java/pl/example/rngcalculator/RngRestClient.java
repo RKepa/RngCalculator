@@ -1,6 +1,5 @@
 package pl.example.rngcalculator;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -10,7 +9,7 @@ import java.io.IOException;
 
 public class RngRestClient<A> {
 
-    public static String generateRandomNumber(ObjectMapper mapper, int min, int max) throws IOException {
+    public static String generateRandomNumber(int min, int max) throws IOException {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
 
             HttpGet request = new HttpGet("https://www.random.org/integers/?num=1&min=" + min

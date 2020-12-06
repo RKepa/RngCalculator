@@ -23,7 +23,7 @@ public class RngServiceImpl implements RngService<String> {
 
     @Override
     public String addTwoNumbers(Class<String> clazz) throws IOException {
-        String firstNumber = generateRandomNumber(mapper, min, max);
+        String firstNumber = generateRandomNumber(min, max);
         Double secondNumber = generateSecondNumber(min, max);
         double result = parseDouble(firstNumber) + secondNumber;
         return clazz.cast(Double.toString(result));
